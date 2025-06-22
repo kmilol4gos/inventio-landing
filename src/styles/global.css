@@ -141,7 +141,7 @@
 }
 
 /* 2. Eliminar márgenes y paddings por defecto */
-* {
+html {
 	margin: 0;
 	padding: 0;
 }
@@ -158,36 +158,6 @@ body {
 	font-family: "Inter Variable", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
-
-/* 5. Imágenes y medios responsivos */
-img,
-picture,
-video,
-canvas,
-svg {
-	display: block;
-	max-width: 100%;
-	height: auto;
-}
-
-/* 6. Eliminar estilos por defecto de inputs y botones */
-input,
-button,
-textarea,
-select {
-	font: inherit;
-	color: inherit;
-	background: none;
-	border: none;
-	outline: none;
-}
-
-/* 7. Botones sin bordes extraños */
-button {
-	cursor: pointer;
-	background: transparent;
-	border: none;
 }
 
 /* 8. Enlaces sin subrayado por defecto */
