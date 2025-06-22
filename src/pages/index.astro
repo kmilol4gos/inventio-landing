@@ -1,10 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/hero/Hero";
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Features from "@/components/features/Features.astro";
+import Benefits from "@/components/benefits/Benefits.astro";
+import Navbar from "@/components/navbar/Navbar";
 ---
 
 <Layout>
-	<Hero client:idle />
+	<Navbar client:idle />
+	<main>
+		<Hero client:idle />
+		<Features />
+		<Benefits />
+	</main>
 </Layout>

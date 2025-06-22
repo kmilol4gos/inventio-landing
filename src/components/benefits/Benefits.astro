@@ -1,0 +1,157 @@
+---
+// @ts-ignore - Astro components don't need explicit type definitions for props
+const props = Astro.props;
+
+const benefits = [
+	{
+		icon: "⚡",
+		title: "Ahorro de tiempo",
+		description: "Automatiza tareas manuales en minutos",
+		stat: "80% menos tiempo",
+	},
+	{
+		icon: "✅",
+		title: "Evita errores",
+		description: "Crea etiquetas precisas en segundos",
+		stat: "95% precisión",
+	},
+	{
+		icon: "📱",
+		title: "Multiplataforma",
+		description: "Accede desde cualquier dispositivo",
+		stat: "24/7 disponible",
+	},
+];
+---
+
+<section class="py-20 bg-inventio-grisClaro/50">
+	<div class="container mx-auto px-4">
+		<div class="text-center mb-16">
+			<h2
+				class="text-4xl md:text-5xl font-bold text-inventio-textoPrincipal mb-6"
+			>
+				¿Por qué elegir{" "}
+				<span class="text-inventio-naranja">Inventio?</span>
+			</h2>
+			<p class="text-xl text-inventio-textoSecundario max-w-2xl mx-auto">
+				Más que una herramienta, es tu socio tecnológico para hacer crecer tu
+				negocio
+			</p>
+		</div>
+
+		<div class="grid md:grid-cols-3 gap-8 mb-16">
+			{
+				benefits.map((benefit, index) => (
+					<div
+						class="bg-inventio-blanco rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group animate-fade-in"
+						style={{ animationDelay: `${index * 0.2}s` }}
+						data-key={index}
+					>
+						<div class="text-center">
+							<div class="bg-inventio-naranja/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:bg-inventio-naranja/20 transition-colors">
+								<span class="text-3xl">{benefit.icon}</span>
+							</div>
+							<h3 class="text-xl font-bold text-inventio-textoPrincipal mb-3">
+								{benefit.title}
+							</h3>
+							<p class="text-inventio-textoSecundario mb-4">
+								{benefit.description}
+							</p>
+							<div class="bg-inventio-naranja/10 rounded-lg py-2 px-4 inline-block">
+								<span class="text-inventio-naranja font-bold text-sm">
+									{benefit.stat}
+								</span>
+							</div>
+						</div>
+					</div>
+				))
+			}
+		</div>
+
+		{/* Comparison Table */}
+		<div
+			class="bg-inventio-blanco rounded-2xl shadow-xl overflow-hidden animate-scale-in"
+		>
+			<div class="bg-inventio-naranja/5 px-8 py-6 border-b">
+				<h3 class="text-2xl font-bold text-inventio-textoPrincipal text-center">
+					Gestión Manual vs Inventio
+				</h3>
+			</div>
+			<div class="overflow-x-auto">
+				<table class="w-full">
+					<thead class="bg-inventio-grisClaro/30">
+						<tr>
+							<th
+								class="px-6 py-4 text-left text-inventio-textoPrincipal font-semibold"
+							>
+								Tarea
+							</th>
+							<th class="px-6 py-4 text-center text-red-600 font-semibold">
+								Excel/Papel
+							</th>
+							<th
+								class="px-6 py-4 text-center text-inventio-naranja font-semibold"
+							>
+								Con Inventio
+							</th>
+						</tr>
+					</thead>
+					<tbody class="divide-y divide-inventio-grisClaro">
+						<tr>
+							<td class="px-6 py-4 font-medium text-inventio-textoPrincipal">
+								Crear etiquetas
+							</td>
+							<td class="px-6 py-4 text-center text-red-600">
+								15 min por producto
+							</td>
+							<td
+								class="px-6 py-4 text-center text-inventio-naranja font-semibold"
+							>
+								30 segundos
+							</td>
+						</tr>
+						<tr class="bg-inventio-grisClaro/20">
+							<td class="px-6 py-4 font-medium text-inventio-textoPrincipal">
+								Control de stock
+							</td>
+							<td class="px-6 py-4 text-center text-red-600">
+								Manual, errores frecuentes
+							</td>
+							<td
+								class="px-6 py-4 text-center text-inventio-naranja font-semibold"
+							>
+								Automático, sin errores
+							</td>
+						</tr>
+						<tr>
+							<td class="px-6 py-4 font-medium text-inventio-textoPrincipal">
+								Reportes de caja
+							</td>
+							<td class="px-6 py-4 text-center text-red-600">
+								2 horas diarias
+							</td>
+							<td
+								class="px-6 py-4 text-center text-inventio-naranja font-semibold"
+							>
+								Instantáneo
+							</td>
+						</tr>
+						<tr class="bg-inventio-grisClaro/20">
+							<td class="px-6 py-4 font-medium text-inventio-textoPrincipal">
+								Acceso móvil
+							</td>
+							<td class="px-6 py-4 text-center text-red-600">
+								No disponible
+							</td>
+							<td
+								class="px-6 py-4 text-center text-inventio-naranja font-semibold"
+							>
+								✅ Incluido
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</section>

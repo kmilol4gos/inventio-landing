@@ -1,0 +1,60 @@
+---
+const features = [
+	{
+		icon: "🏷️",
+		title: "Etiquetas personalizadas",
+		description:
+			"Crea e imprime etiquetas completas para productos con códigos de barras, precios y descripciones automáticas.",
+	},
+	{
+		icon: "📦",
+		title: "Inventario en tiempo real",
+		description:
+			"Actualiza y consulta tu stock al instante desde cualquier dispositivo, evita quedarte sin productos.",
+	},
+	{
+		icon: "💰",
+		title: "Caja diaria y reportes",
+		description:
+			"Registra ingresos y egresos según tipo de pago, genera reportes automáticos y controla tu flujo de caja.",
+	},
+];
+---
+
+<section id="Caracteristicas" class="py-20 bg-white">
+	<div class="mx-auto px-4">
+		<div class="text-center mb-16">
+			<h2
+				class="text-4xl md:text-5xl font-bold text-inventio-textoPrincipal mb-6"
+			>
+				Todo lo que necesitas en{" "}
+				<span class="text-inventio-naranja">una plataforma</span>
+			</h2>
+			<p class="text-xl text-inventio-textoSecundario max-w-3xl mx-auto">
+				Simplifica la gestión de tu PYME con herramientas diseñadas
+				específicamente para retail, foodservice y ópticas
+			</p>
+		</div>
+
+		<div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+			{
+				features.map((feature, index) => (
+					<div
+						class="text-center hover:scale-105 transition-all duration-300 animate-fade-in"
+						style={{ animationDelay: `${index * 0.2}s` }}
+					>
+						<div class="bg-inventio-naranja/10 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-inventio-naranja/20 transition-colors">
+							<span class="text-4xl">{feature.icon}</span>
+						</div>
+						<h3 class="text-2xl font-semibold text-inventio-textoPrincipal mb-4">
+							{feature.title}
+						</h3>
+						<p class="text-inventio-textoSecundario font-medium leading-relaxed">
+							{feature.description}
+						</p>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>
