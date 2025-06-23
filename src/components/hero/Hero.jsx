@@ -28,7 +28,7 @@ export default function Hero() {
 						</div>
 						<div className="space-y-4">
 							<button
-								onClick={() => scrollToSection("precios")}
+								onClick={() => scrollToSection("Precios")}
 								className="cursor-pointer bg-inventio-naranja hover:bg-inventio-naranja/90 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all hover:scale-105 shadow-lg hover:shadow-xl"
 							>
 								Comienza a usar – CLP 30.000/mes
